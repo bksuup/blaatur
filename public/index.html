@@ -12,6 +12,8 @@
       --muted: #5b6b7d;
       --accent: #1f5fbf;
       --border: #dce3ec;
+      --danger: #c62828;
+      --danger-bg: #fdecec;
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -21,6 +23,8 @@
         --muted: #9aabbf;
         --accent: #6ea8ff;
         --border: #2a3a50;
+        --danger: #ff6b6b;
+        --danger-bg: #2a1a1f;
       }
     }
     * { box-sizing: border-box; }
@@ -53,13 +57,29 @@
     li > label { cursor: pointer; }
     input[type="checkbox"] { margin-right: 0.5rem; accent-color: var(--accent); }
     label:has(> input:checked) { color: var(--muted); text-decoration: line-through; }
+    /* Every > block is an important notice: red with a "!" badge */
     blockquote {
+      position: relative;
       margin: 1.25rem 0;
-      padding: 0.75rem 1rem;
-      background: var(--card);
-      border-left: 4px solid var(--accent);
+      padding: 0.75rem 1rem 0.75rem 3rem;
+      background: var(--danger-bg);
+      border-left: 4px solid var(--danger);
       border-radius: 0.25rem;
-      color: var(--muted);
+      color: var(--text);
+    }
+    blockquote::before {
+      content: "!";
+      position: absolute;
+      left: 0.85rem;
+      top: 0.85rem;
+      width: 1.4rem;
+      height: 1.4rem;
+      border-radius: 50%;
+      background: var(--danger);
+      color: var(--danger-bg);
+      font-weight: 700;
+      line-height: 1.4rem;
+      text-align: center;
     }
     blockquote p { margin: 0; }
     table {
