@@ -1,0 +1,35 @@
+name: Build site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      [INFO.md, build.js, package.json, package-lock.json, public/index.html]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      # Commits made with GITHUB_TOKEN don't trigger workflows, so this can't loop.
+      - name: Commit rendered page
+        run: |
+          git diff --quiet public/index.html && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898783+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Render INFO.md into public/index.html" public/index.html
+          git push

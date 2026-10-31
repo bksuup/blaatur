@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blåtur 2027</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --text: #1d2733;
+      --muted: #5b6b7d;
+      --accent: #1f5fbf;
+      --border: #dce3ec;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1722;
+        --card: #172131;
+        --text: #e6edf5;
+        --muted: #9aabbf;
+        --accent: #6ea8ff;
+        --border: #2a3a50;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0 auto;
+      max-width: 42rem;
+      padding: 2rem 1.25rem 4rem;
+      background: var(--bg);
+      color: var(--text);
+      font: 1.0625rem/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    h1 {
+      font-size: 2.25rem;
+      color: var(--accent);
+      text-align: center;
+      margin: 0 0 1.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin: 2.5rem 0 0.75rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 2px solid var(--border);
+    }
+    h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+    a { color: var(--accent); }
+    ul, ol { padding-left: 1.4rem; }
+    li { margin: 0.25rem 0; }
+    /* GitHub-style task lists (- [ ] item) for the packing list */
+    li:has(> label > input[type="checkbox"]) { list-style: none; margin-left: -1.4rem; }
+    li > label { cursor: pointer; }
+    input[type="checkbox"] { margin-right: 0.5rem; accent-color: var(--accent); }
+    label:has(> input:checked) { color: var(--muted); text-decoration: line-through; }
+    blockquote {
+      margin: 1.25rem 0;
+      padding: 0.75rem 1rem;
+      background: var(--card);
+      border-left: 4px solid var(--accent);
+      border-radius: 0.25rem;
+      color: var(--muted);
+    }
+    blockquote p { margin: 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--card);
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+    th, td { padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--border); text-align: left; }
+    th { color: var(--muted); font-weight: 600; }
+    code {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 0.25rem;
+      padding: 0.1rem 0.35rem;
+      font-size: 0.9em;
+    }
+    img { max-width: 100%; border-radius: 0.5rem; }
+    hr { border: 0; border-top: 1px solid var(--border); margin: 2rem 0; }
+  </style>
+</head>
+<body>
+<!-- INFO:START -->
+<h1>Blåtur 2027</h1>
+<h2>Oppmøte</h2>
+<table>
+<thead>
+<tr>
+<th>Tid</th>
+<th>Lokasjon</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>07:00</td>
+<td>Starbucks, Oslo Gardemoen</td>
+</tr>
+</tbody></table>
+<h2>Pakkeliste</h2>
+<ul>
+<li><label><input type="checkbox"> Solkrem</label></li>
+<li><label><input type="checkbox"> Badeshorts</label></li>
+<li><label><input type="checkbox"> Skibriller</label></li>
+</ul>
+<h2>Annet info</h2>
+<blockquote>
+<p>NB: Ikke ta med jobb-telefon</p>
+</blockquote>
+<!-- INFO:END -->
+</body>
+</html>
