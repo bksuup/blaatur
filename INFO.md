@@ -15,3 +15,7 @@
 ## Annet info
 
 > NB: Ikke ta med jobb-telefon
+
+## Test
+
+Dette er en test-endring for å sjekke automatisk rollout fra github
