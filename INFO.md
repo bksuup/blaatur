@@ -1,21 +1,32 @@
 # Blåtur 2027
 
-## Oppmøte
+## Destination
 
-| Tid | Lokasjon |
+SURPRISE!
+
+## Final Dates
+
+20th May - 23rd May 2027
+
+(Make sure to take those days off)
+
+## Meetup
+
+| Time | Location |
 | --- | --- |
 | 07:00 | Starbucks, Oslo Gardemoen |
 
-## Pakkeliste
+> **DO NOT BE LATE**
 
-- [ ] Solkrem
-- [ ] Badeshorts
-- [ ] Skibriller
+## Documents you MUST bring
 
-## Annet info
+- [ ] Passport
+- [ ] Wallet
+- [ ] Driver's license
 
-> NB: Ikke ta med jobb-telefon
+## Optional
 
-## Test
-
-Dette er en test-endring for å sjekke automatisk rollout fra github
+- [ ] Rain-jacket
+- [ ] Downhill ski goggles
+- [ ] Swim shorts
+- [ ] Reflex vest
